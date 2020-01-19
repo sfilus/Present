@@ -1,0 +1,14 @@
+{
+  "name": "research-fidelity-programmer",
+  "version": "1.0.0",
+  "description": "My cover letter for the Programmer opening on Basecamp's Research & Fidelity team.",
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css"
+  },
+  "author": "Stephen Filus",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.1.4"
+  }
+}
