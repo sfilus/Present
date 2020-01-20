@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "My cover letter for the Programmer opening on Basecamp's Research & Fidelity team.",
   "scripts": {
-    "build": "postcss css/tailwind.css -o public/build/tailwind.css"
+    "build": "postcss css/cover-letter.css -o public/build/main.css & webpack"
   },
+  "private": true,
   "author": "Stephen Filus",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^9.7.4",
     "postcss-cli": "^7.1.0",
-    "tailwindcss": "^1.1.4"
+    "stimulus": "^1.1.1",
+    "tailwindcss": "^1.1.4",
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
