@@ -1,23 +1,18 @@
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Steve's cover letter for the open programmer position at Basecamp.">
-  <meta name="author" content="Stephen Filus">
-  <meta http-equiv="X-UA-Compatible" content="ie-edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Steve's cover letter</title>
-  <link rel="stylesheet" href="../build/main.css">
-  <script src="build/main.js"></script>
+  <%= htmlWebpackPlugin.options.meta %>
 </head>
 
 <body>
-  <header class="w-full border-b border-grey p-4 text-center">
-    Header
-  </header>
+    <%= htmlWebpackPlugin.options.header %>
 
-    <div id="content" class="pb-20">
+    <div id="content" class="pb-20 pt-10">
       <h1 class="text-4xl text-center font-bold ">Index</h1>
+      <div class="p10 text-center">
+        <a href="why-i-want-to-work-at-basecamp/slide1.html">Slide</a>
+      </div>
       <div id="test_text">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula, nisi eu eleifend efficitur, erat nunc auctor mi, et feugiat lacus nisi sed mauris. Morbi quis orci ut nulla placerat ultricies. Sed id pretium urna. Ut non luctus nunc. Sed viverra imperdiet velit at venenatis. Pellentesque aliquet, nulla quis scelerisque malesuada, arcu ex commodo nisl, nec imperdiet arcu nisi ac ligula. Pellentesque auctor, sapien a ullamcorper ornare, enim velit consequat elit, a elementum orci erat non risus. Vestibulum congue imperdiet purus ac tincidunt. Curabitur vel finibus justo, vitae auctor orci. Proin eget risus blandit, tincidunt eros et, sollicitudin velit. Nunc vitae erat id velit rutrum varius at non dolor. Nunc at accumsan velit. Duis ultrices a risus at interdum. Suspendisse sit amet purus tortor. Fusce id turpis congue, interdum massa sit amet, ultrices ante.
 
@@ -28,9 +23,6 @@ Sed in imperdiet erat. Nunc ut lacinia ante. Etiam libero enim, aliquet vel sapi
 
     </div>
 
-  <footer class="w-full border-t border-grey p-4 text-center fixed bottom-0">
-    Footer
-  </footer>
-
+    <%= htmlWebpackPlugin.options.footer %>
 </body>
 </html>
