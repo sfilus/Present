@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
+
+.cover-letter-content-container {
+  @apply pb-20 pt-10;
+}
+
 @tailwind utilities;
