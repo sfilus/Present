@@ -2,7 +2,7 @@
 @tailwind components;
 
 .cover-letter-content-container {
-  @apply pb-20 pt-10;
+  @apply pb-20 pt-10 bg-bcyellow-lighter h-screen;
 }
 
 @tailwind utilities;
