@@ -24,6 +24,7 @@
   </div>
 
   <footer 
+  data-controller="footer"
   id="footer"
   data-turbo-links-permanent
   class="w-full bg-bcyellow fixed bottom-0">
@@ -33,7 +34,9 @@
     Back
   </button>
 
-  <button class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded">
+  <button 
+    data-action="click->footer#next"
+    class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded">
     Next
   </button>
   </div>
