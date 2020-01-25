@@ -6,13 +6,15 @@
 </head>
 
 <body class="bg-bcyellow text-gray-900">
-  <div id="content" class="cover-letter-content-container ">
-    <h1 class="text-4xl text-center font-bold ">2. Why I want to work at Basecamp</h1>
-    <div class="p10 text-center">
-      <a href="why-i-want-to-work-at-basecamp/slide1.html">Slide</a>
-    </div>
-    <div id="test_text">
-      Testing
+
+  <div 
+    id="content" 
+    class="cover-letter-content-container" 
+    data-controller="content footer" 
+    data-action="popstate@window->content#backState">
+
+    <div data-target="content.contentBody">
+      <h1 class="text-4xl text-center font-bold ">2. Hi</h1>
     </div>
 
   </div>
