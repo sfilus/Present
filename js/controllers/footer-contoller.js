@@ -7,10 +7,6 @@ let pages = [
 
 let domParser = new DOMParser();
 
-// window.addEventListener('popstate', function(e) {
-//   document.getElementById("content").innerHTML = e.state.content;
-// });
-
 export default class extends Controller {
 
   // static get targets() {

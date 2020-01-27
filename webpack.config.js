@@ -5,6 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const footer = fs.readFileSync(__dirname + '/templates/partials/footer.html');
 const meta = fs.readFileSync(__dirname + '/templates/partials/meta.html');
 
+const slidesJson = JSON.parse(fs.readFileSync(__dirname + '/slides.json', 'utf8'));
+console.log(slidesJson);
+
 module.exports = {
   mode: 'production',
   entry: './js/cover-letter.js',
@@ -12,6 +15,9 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'public/build')
   },
+  // loaders: [
+  //   { test: /\.html$/, loader: "underscore-template-loader" }
+  // ],
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'templates/pages/1-intro.html'),
