@@ -14,14 +14,11 @@ const meta = fs.readFileSync(__dirname + '/templates/partials/meta.html');
 let slidePlugins = _.map(slidesJson.pages, function(slide, index) {
   let config = {
       template: path.resolve(__dirname, 'templates/pages/', slide.template),
-      filename: path.resolve(__dirname, 'public/build/', slide.template),
+      filename: path.resolve(__dirname, 'public/build/', slide.buildTemplate),
       footer: footer,
       meta: meta,
       inject: false
   };
-  if(index === 0) {
-    config.filename = path.resolve(__dirname,'public/build/', 'index.html');
-  }
   return new HtmlWebpackPlugin(config);
 });
 

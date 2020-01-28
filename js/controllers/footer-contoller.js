@@ -13,22 +13,30 @@ export default class extends Controller {
   //   return ["contentBody"]
   // }
 
-  swapContent(html, pageIndex) {
+  pickSlide(event) {
+    console.log(event);
+    console.log(event.target);
+    fetch(event.target.value)
+      .then(response => response.text())
+      .then(html => this.swapContent(html, 0));
+  }
+
+  swapContent(html, templateName) {
     var currentContentElement = document.getElementById("content");
     var newContentElement = domParser.parseFromString(html, "text/html").getElementById("content");
     currentContentElement.innerHTML = newContentElement.innerHTML;
-    window.history.pushState({content: newContentElement.innerHTML}, '', pages[pageIndex]);
+    window.history.pushState({content: newContentElement.innerHTML}, '', templateName);
   }
 
   back() {
     fetch(pages[0])
       .then(response => response.text())
-      .then(html => this.swapContent(html, 0));
+      .then(html => this.swapContent(html, page[0]));
   }
 
   next() {
     fetch(pages[1])
       .then(response => response.text())
-      .then(html => this.swapContent(html, 1));
+      .then(html => this.swapContent(html, pages[1]));
   }
 };
