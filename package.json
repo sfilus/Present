@@ -10,6 +10,7 @@
     "watch:css": "onchange \"css/*.css\" -- run-s build:css",
     "watch:js": "onchange \"js/**/*.js\" -- run-s build:webpack",
     "watch:templates": "onchange \"templates/**/*.html\" -- run-s build:webpack",
+    "watch:ejs": "onchange \"templates/**/*.ejs\" -- run-s build:webpack",
     "watch": "run-p serve watch:*"
   },
   "private": true,
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
+    "ejs": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
     "lodash": "^4.17.15",
     "npm-run-all": "^4.1.5",

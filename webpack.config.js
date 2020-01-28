@@ -2,10 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const _ = require('lodash');
+const ejs = require('ejs');
 
-const footer = fs.readFileSync(__dirname + '/templates/partials/footer.html');
-const meta = fs.readFileSync(__dirname + '/templates/partials/meta.html');
 const slidesJson = JSON.parse(fs.readFileSync(__dirname + '/slides.json', 'utf8'));
+
+const footerString = fs.readFileSync(__dirname + '/templates/partials/footer.ejs', 'utf8');
+let footer = ejs.render(footerString, {"pages": slidesJson.pages});
+
+const meta = fs.readFileSync(__dirname + '/templates/partials/meta.html');
 
 let slidePlugins = _.map(slidesJson.pages, function(slide, index) {
   let config = {
