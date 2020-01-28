@@ -1,13 +1,12 @@
 {
-  "title": "Basecamp Cover Letter",
   "pages": [
     {
-      "template": "./templates/pages/1-intro.html",
-      "output": "./public/build/index.html"
+      "template": "1-intro.html",
+      "title": "Intro"
     },
     {
-      "template": "./templates/pages/2-why-i-want-to-work-at-basecamp.html",
-      "output": "./public/build/2-why-i-want-to-work-at-basecamp.html"
+      "template": "2-why-i-want-to-work-at-basecamp.html",
+      "title": "Why I Want To Work At Basecamp"
     }
   ]
 }  
