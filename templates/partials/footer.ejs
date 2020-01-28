@@ -13,12 +13,16 @@
 
   <div>
     <select 
+      data-target="footer.slideList"
       data-action="change->footer#pickSlide"
       class="block w-full bg-gray-300 border border-gray-300 py-3 px-4 pr-8 rounded">
       <% pages.forEach(function(page) { %>
-        <option value="<%= page.buildTemplate %>"><%= page.title %></option>
+        <option 
+          data-target="footer.slideOption"
+          value="<%= page.buildTemplate %>"><%= page.title %></option>
       <% }); %>
    </select>
+
 
   </div>
 

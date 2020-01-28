@@ -40,14 +40,20 @@
 
   <div>
     <select 
+      data-target="footer.slideList"
       data-action="change->footer#pickSlide"
       class="block w-full bg-gray-300 border border-gray-300 py-3 px-4 pr-8 rounded">
       
-        <option value="index.html">Intro</option>
+        <option 
+          data-target="footer.slideOption"
+          value="index.html">Intro</option>
       
-        <option value="2-why-i-want-to-work-at-basecamp.html">Why I Want To Work At Basecamp</option>
+        <option 
+          data-target="footer.slideOption"
+          value="2-why-i-want-to-work-at-basecamp.html">Why I Want To Work At Basecamp</option>
       
    </select>
+
 
   </div>
 
