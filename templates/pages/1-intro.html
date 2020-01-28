@@ -5,15 +5,14 @@
   <%= htmlWebpackPlugin.options.meta %>
 </head>
 
-<body class="bg-bcyellow text-gray-900">
+<body class="bg-bcyellow text-gray-900" data-controller="history">
   <div 
     id="content" 
     class="cover-letter-content-container" 
-    data-controller="content footer" 
-    data-action="popstate@window->content#backState">
+    data-action="popstate@window->history#backState">
 
     <div 
-      data-target="content.contentBody">
+      data-target="history.contentBody">
       <h1 class="text-4xl text-center font-bold ">1. Intro</h1>
     </div>
 

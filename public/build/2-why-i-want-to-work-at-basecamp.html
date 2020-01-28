@@ -16,10 +16,10 @@
   <div 
     id="content" 
     class="cover-letter-content-container" 
-    data-controller="content footer" 
-    data-action="popstate@window->content#backState">
+    data-controller="history" 
+    data-action="popstate@window->history#backState">
 
-    <div data-target="content.contentBody">
+    <div data-target="history.contentBody">
       <h1 class="text-4xl text-center font-bold ">2. Hi</h1>
     </div>
 
@@ -40,16 +40,16 @@
 
   <div>
     <select 
-      data-target="footer.slideList"
+      data-target="footer.slideList history.slideList"
       data-action="change->footer#pickSlide"
       class="block w-full bg-gray-300 border border-gray-300 py-3 px-4 pr-8 rounded">
       
         <option 
-          data-target="footer.slideOption"
+          data-target="footer.slideOption history.slideOption"
           value="index.html">Intro</option>
       
         <option 
-          data-target="footer.slideOption"
+          data-target="footer.slideOption history.slideOption"
           value="2-why-i-want-to-work-at-basecamp.html">Why I Want To Work At Basecamp</option>
       
    </select>
