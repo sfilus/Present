@@ -1,23 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <title>[1] Steve's cover letter</title>
-  <%= htmlWebpackPlugin.options.meta %>
-</head>
+  <%= htmlWebpackPlugin.options.header %>
 
-<body class="bg-bcyellow text-gray-900" data-controller="history">
-  <div 
-    id="content" 
-    class="cover-letter-content-container" 
-    data-action="popstate@window->history#backState">
-
-    <div 
-      data-target="history.contentBody">
-      <h1 class="text-4xl text-center font-bold ">1. Intro</h1>
-    </div>
-
-  </div>
+    <h1 class="text-4xl text-center font-bold ">1. Intro</h1>
 
   <%= htmlWebpackPlugin.options.footer %>
-</body>
-</html>
