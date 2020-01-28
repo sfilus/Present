@@ -8,7 +8,6 @@ export default class extends Controller {
   }
 
   pickSlide(event) {
-    console.log("In pick slide");
     fetch(event.target.value)
       .then(response => response.text())
       .then(html => this.swapContent(html, 0));
@@ -38,10 +37,13 @@ export default class extends Controller {
       console.log("You're already at the first page.");
       return;
     }
-    let previousTemplate = this.slideOptionTargets[current.index - 1].value;
-    fetch(previousTemplate)
+
+    let previous = this.slideOptionTargets[current.index - 1];
+    current.selected = false;
+    previous.selected = true;
+    fetch(previous.value)
       .then(response => response.text())
-      .then(html => this.swapContent(html, previousTemplate));
+      .then(html => this.swapContent(html, previous.value));
   }
 
   next() {
@@ -50,9 +52,13 @@ export default class extends Controller {
       console.log("You're already at the end.");
       return;
     }
-    let nextTemplate = this.slideOptionTargets[current.index + 1].value;
-    fetch(nextTemplate)
+
+    let next= this.slideOptionTargets[current.index + 1];
+    current.selected = false;
+    next.selected = true;
+
+    fetch(next.value)
       .then(response => response.text())
-      .then(html => this.swapContent(html, nextTemplate))
+      .then(html => this.swapContent(html, next.value))
   }
 };
