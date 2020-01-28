@@ -10,7 +10,7 @@ export default class extends Controller {
   pickSlide(event) {
     fetch(event.target.value)
       .then(response => response.text())
-      .then(html => this.swapContent(html, 0));
+      .then(html => this.swapContent(html, event.target.value));
   }
 
   swapContent(html, templateName) {
