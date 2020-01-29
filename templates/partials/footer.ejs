@@ -19,10 +19,10 @@
       data-target="footer.slideList history.slideList"
       data-action="change->footer#pickSlide"
       class="block w-full bg-gray-300 border border-gray-300 py-3 px-4 pr-8 rounded">
-      <% pages.forEach(function(page) { %>
+      <% pages.forEach(function(page, index, collection) { %>
         <option 
           data-target="footer.slideOption history.slideOption"
-          value="<%= page.buildTemplate %>"><%= page.title %></option>
+          value="<%= page.buildTemplate %>"><%= "[ " + (index + 1) + "/" + collection.length + " ] " +  page.title %></option>
       <% }); %>
    </select>
 
