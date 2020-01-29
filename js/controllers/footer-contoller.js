@@ -7,6 +7,15 @@ export default class extends Controller {
     return ["slideList", "slideOption", "backButton", "nextButton"]
   }
 
+  initialize() {
+    let lastSlashIndex = window.location.pathname.lastIndexOf('/');
+    let endIndex = window.location.pathname.lastIndexOf('.html');
+    let templateName = window.location.pathname.substring(lastSlashIndex + 1, endIndex);
+    let slideIndex = this.getSlideIndex(templateName + '.html');
+    this.slideOptionTargets[slideIndex].selected = true;
+    this.updateButtonStatus(slideIndex);
+  }
+
   pickSlide(event) {
     let index = this.getSlideIndex(event.target.value);
     this.updateButtonStatus(index);
