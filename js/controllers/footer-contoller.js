@@ -29,7 +29,7 @@ export default class extends Controller {
     var currentContentElement = document.getElementById("content");
     var newContentElement = domParser.parseFromString(html, "text/html").getElementById("content");
     currentContentElement.innerHTML = newContentElement.innerHTML;
-    window.history.pushState({content: newContentElement.innerHTML}, '', templateName);
+    window.history.pushState({content: newContentElement.innerHTML, template: templateName}, '', templateName);
   }
 
   getCurrentSlide() {
