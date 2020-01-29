@@ -4,10 +4,13 @@ let domParser = new DOMParser();
 export default class extends Controller {
 
   static get targets() {
-    return ["slideList", "slideOption"]
+    return ["slideList", "slideOption", "backButton", "nextButton"]
   }
 
   pickSlide(event) {
+    let index = this.getSlideIndex(event.target.value);
+    this.updateButtonStatus(index);
+    
     fetch(event.target.value)
       .then(response => response.text())
       .then(html => this.swapContent(html, event.target.value));
@@ -31,16 +34,39 @@ export default class extends Controller {
     }
   }
 
-  back() {
-    let current = this.getCurrentSlide();
-    if(current.index === 0) {
-      console.log("You're already at the first page.");
-      return;
+  getSlideIndex(templateName) {
+    for(let i = 0; i < this.slideOptionTargets.length; i++) {
+      if(this.slideOptionTargets[i].value === templateName) {
+        return i;
+      }
+    }
+    console.log("Error happened: couldn't find template name: ", templateName);
+    return -1;
+  }
+
+  updateButtonStatus(nextPageIndex) {
+    let slideListLength = this.slideOptionTargets.length;
+    if(nextPageIndex === 0) {
+      this.backButtonTarget.disabled = true;
+    } else {
+      this.backButtonTarget.disabled = false;
     }
 
+    if(nextPageIndex >= (slideListLength - 1)) {
+      this.nextButtonTarget.disabled = true;
+    } else {
+      this.nextButtonTarget.disabled = false;
+    }
+  }
+
+  back() {
+    let current = this.getCurrentSlide();
     let previous = this.slideOptionTargets[current.index - 1];
-    current.selected = false;
+    current.slideOption.selected = false;
     previous.selected = true;
+
+    this.updateButtonStatus(current.index - 1);
+
     fetch(previous.value)
       .then(response => response.text())
       .then(html => this.swapContent(html, previous.value));
@@ -48,14 +74,11 @@ export default class extends Controller {
 
   next() {
     let current = this.getCurrentSlide();
-    if(current.index === this.slideOptionTargets.length -1) {
-      console.log("You're already at the end.");
-      return;
-    }
-
-    let next= this.slideOptionTargets[current.index + 1];
-    current.selected = false;
+    let next = this.slideOptionTargets[current.index + 1];
+    current.slideOption.selected = false;
     next.selected = true;
+
+    this.updateButtonStatus(current.index + 1);
 
     fetch(next.value)
       .then(response => response.text())
