@@ -3,7 +3,7 @@ import { Controller } from "stimulus";
 export default class extends Controller {
 
   static get targets() {
-    return ["contentBody", "slideOption", "slideList"];
+    return ["contentBody", "slideOption", "slideList", "nextButton", "backButton"];
   }
 
   backState(event) {
@@ -12,18 +12,18 @@ export default class extends Controller {
   }
 
   setSlideOption(templateName) {
-    this.slideOptionTargets.forEach(element => {
+    for(let i = 0; i < this.slideOptionTargets.length; i++) {
+      let element = this.slideOptionTargets[i];
       if(element.value === templateName) {
         element.selected = true;
-        //this.updateButtonStatus(index);
-        //would need to add back button and next button as targets on this controller.
+        this.updateButtonStatus(i);
       } else {
         element.selected = false;
       }
-    });
+    }
   }
 
-  //TODO: should probably refactor this into a single controller, so that this method is reusable.
+  //todo: probably should refactor this into a single controller so I can share this function.
   updateButtonStatus(nextPageIndex) {
     let slideListLength = this.slideOptionTargets.length;
     if(nextPageIndex === 0) {
