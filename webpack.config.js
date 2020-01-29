@@ -27,8 +27,5 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'public/build')
   },
-  // loaders: [
-  //   { test: /\.html$/, loader: "underscore-template-loader" }
-  // ],
   plugins: slidePlugins
 };
