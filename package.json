@@ -1,7 +1,7 @@
 {
   "name": "research-fidelity-programmer",
   "version": "1.0.0",
-  "description": "My cover letter for the Programmer opening on Basecamp's Research & Fidelity team.",
+  "description": "Static slideshow generator",
   "scripts": {
     "serve": "live-server",
     "build": "postcss css/cover-letter.css -o public/build/main.css & webpack",
