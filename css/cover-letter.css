@@ -13,8 +13,28 @@
   @apply flex flex-col bg-white max-w-2xl rounded-lg shadow-md pb-64 mx-auto h-full p-10;
 }
 
+.content-wrapper p {
+  @apply pb-8;
+}
+
+a {
+  @apply text-green-600 font-medium tracking-wide;
+}
+
 .content-box {
   @apply bg-gray-100 px-4 py-2 m-2 rounded-lg;
+}
+
+.content-wrapper ul {
+  @apply list-disc pb-5;
+}
+
+.content-wrapper ol {
+  @apply list-decimal pb-5;
+}
+
+.content-wrapper li {
+  @apply pb-5 pl-2 ml-10;
 }
 
 @tailwind utilities;
