@@ -3,9 +3,9 @@ This project is static slide show generator. Add a new slide. Edit the generated
 
 ## Adding a new slide
 1. In the root of the project directory, run the add-slide script: 
-1a. For Example: node add-slide.js my-template-name.html "my template title"
-2. This will create a new template in the templates/pages/ directory, and update the slides.json config file.
-3. Add your content to the generated slide template in templates/pages/.
+2. For Example: node add-slide.js my-template-name.html "my template title"
+3. This will create a new template in the templates/pages/ directory, and update the slides.json config file.
+4. Add your content to the generated slide template in templates/pages/.
 
 ## Building
 In the root of the directory: 'npm run build'.
