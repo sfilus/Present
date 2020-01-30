@@ -17,9 +17,19 @@
     class="cover-letter-content-container" 
     data-action="popstate@window->history#backState">
 
-    <div data-target="history.contentBody">
+    <div data-target="history.contentBody" class="container mx-auto h-screen pb-64">
 
-  <h1 class="text-4xl text-center font-bold ">2. Hello</h1>
+    <h1 class="text-4xl text-center font-bold mb-6">
+      WIWTWAB
+    </h1>
+
+    <div class="flex justify-center h-screen">
+      <div class="flex flex-col bg-white max-w-2xl w-full rounded-lg shadow-md mb-64">
+        <div class="text-center bg-gray-100 px-4 py-2 m-2 rounded-lg">1</div>
+        <div class="text-center bg-gray-100 px-4 py-2 m-2 rounded-lg">2</div>
+        <div class="text-center bg-gray-100 px-4 py-2 m-2 rounded-lg">3</div>
+      </div>
+    </div>
 
 </div>
 </div>
@@ -29,7 +39,7 @@
   data-turbo-links-permanent
   class="w-full bg-bcyellow fixed bottom-0 flex justify-center">
 
-  <div class="justify-between items-center flex p-3 w-full lg:max-w-2xl">
+  <div class="justify-between items-center flex py-3 px-3 lg:px-0 w-full lg:max-w-2xl">
   <button 
     data-target="footer.backButton history.backButton"
     data-action="click->footer#back"
@@ -45,15 +55,23 @@
       
         <option 
           data-target="footer.slideOption history.slideOption"
-          value="index.html">[ 1/3 ] Intro</option>
+          value="index.html">[ 1/5 ] Intro</option>
       
         <option 
           data-target="footer.slideOption history.slideOption"
-          value="2-why-i-want-to-work-at-basecamp.html">[ 2/3 ] Why I Want To Work At Basecamp</option>
+          value="2-why-i-want-to-work-at-basecamp.html">[ 2/5 ] Why I Want To Work At Basecamp</option>
       
         <option 
           data-target="footer.slideOption history.slideOption"
-          value="3-how-this-was-built.html">[ 3/3 ] How This Was Built</option>
+          value="3-how-this-was-built.html">[ 3/5 ] How This Was Built</option>
+      
+        <option 
+          data-target="footer.slideOption history.slideOption"
+          value="4-test.html">[ 4/5 ] what do we have here</option>
+      
+        <option 
+          data-target="footer.slideOption history.slideOption"
+          value="5-test">[ 5/5 ] ohhhh my</option>
       
    </select>
 

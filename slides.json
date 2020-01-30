@@ -1,19 +1,29 @@
 {
-  "pages": [
-    {
-      "template": "1-intro.html",
-      "buildTemplate": "index.html",
-      "title": "Intro"
-    },
-    {
-      "template": "2-why-i-want-to-work-at-basecamp.html",
-      "buildTemplate": "2-why-i-want-to-work-at-basecamp.html",
-      "title": "Why I Want To Work At Basecamp"
-    },
-    {
-      "template": "3-how-this-was-built.html",
-      "buildTemplate": "3-how-this-was-built.html",
-      "title": "How This Was Built"
-    }
-  ]
-}  
+	"pages": [
+		{
+			"template": "1-intro.html",
+			"buildTemplate": "index.html",
+			"title": "Intro"
+		},
+		{
+			"template": "2-why-i-want-to-work-at-basecamp.html",
+			"buildTemplate": "2-why-i-want-to-work-at-basecamp.html",
+			"title": "Why I Want To Work At Basecamp"
+		},
+		{
+			"template": "3-how-this-was-built.html",
+			"buildTemplate": "3-how-this-was-built.html",
+			"title": "How This Was Built"
+		},
+		{
+			"template": "4-test.html",
+			"buildTemplate": "4-test.html",
+			"title": "what do we have here"
+		},
+		{
+			"template": "5-test",
+			"buildTemplate": "5-test",
+			"title": "ohhhh my"
+		}
+	]
+}

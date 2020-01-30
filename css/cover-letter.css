@@ -5,4 +5,16 @@
   @apply pb-20 pt-10 bg-bcyellow-lighter h-screen;
 }
 
+.title {
+  @apply text-4xl text-center font-bold mb-10 mt-6;
+}
+
+.content-wrapper {
+  @apply flex flex-col bg-white max-w-2xl rounded-lg shadow-md pb-64 mx-auto h-full p-10;
+}
+
+.content-box {
+  @apply bg-gray-100 px-4 py-2 m-2 rounded-lg;
+}
+
 @tailwind utilities;

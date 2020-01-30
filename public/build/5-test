@@ -18,9 +18,20 @@
     data-action="popstate@window->history#backState">
 
     <div data-target="history.contentBody" class="container mx-auto h-screen pb-64">
+<!-- no content above here -->
 
-<h1 class="text-4xl text-center font-bold ">3. How this was built</h1>
+    <h1 class="title">
+      New Page Template
+    </h1>
 
+    <div class="content-wrapper">
+      <!-- Things inside this div.content-wrapper will be placed inside the white "card" on the slide. -->
+
+      <p>Hello World!</p>
+
+    </div>
+
+<!-- no content below here -->
 </div>
 </div>
 <footer 
