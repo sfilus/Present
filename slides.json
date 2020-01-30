@@ -4,6 +4,16 @@
 			"template": "1-intro.html",
 			"buildTemplate": "index.html",
 			"title": "Introduction"
+		},
+		{
+			"template": "research-fidelity-team.html",
+			"buildTemplate": "research-fidelity-team.html",
+			"title": "Research and Fidelity"
+		},
+		{
+			"template": "fit.html",
+			"buildTemplate": "fit.html",
+			"title": "Fit"
 		}
 	]
 }
