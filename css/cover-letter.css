@@ -10,7 +10,7 @@
 }
 
 .content-wrapper {
-  @apply flex flex-col bg-white max-w-2xl rounded-lg shadow-md pb-64 mx-auto h-full p-10;
+  @apply flex flex-col bg-white max-w-2xl rounded-lg shadow-md pb-64 mx-auto h-full p-10 min-h-full overflow-y-auto scrolling-touch;
 }
 
 .content-wrapper p {
