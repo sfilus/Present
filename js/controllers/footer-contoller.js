@@ -49,8 +49,7 @@ export default class extends Controller {
         return i;
       }
     }
-    console.log("Error happened: couldn't find template name: ", templateName);
-    return -1;
+    return 0; //can happen on first load, when index.html isn't in the url.
   }
 
   updateButtonStatus(nextPageIndex) {
