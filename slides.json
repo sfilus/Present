@@ -6,14 +6,19 @@
 			"title": "Introduction"
 		},
 		{
-			"template": "research-fidelity-team.html",
-			"buildTemplate": "research-fidelity-team.html",
-			"title": "Research and Fidelity"
+			"template": "show-dont-tell.html",
+			"buildTemplate": "show-dont-tell.html",
+			"title": "Show Don't Tell"
 		},
 		{
 			"template": "fit.html",
 			"buildTemplate": "fit.html",
 			"title": "Fit"
+		},
+		{
+			"template": "why-basecamp.html",
+			"buildTemplate": "why-basecamp.html",
+			"title": "Basecamp"
 		}
 	]
 }
