@@ -6,11 +6,6 @@
 			"title": "Introduction"
 		},
 		{
-			"template": "show-dont-tell.html",
-			"buildTemplate": "show-dont-tell.html",
-			"title": "Show Don't Tell"
-		},
-		{
 			"template": "fit.html",
 			"buildTemplate": "fit.html",
 			"title": "Fit"

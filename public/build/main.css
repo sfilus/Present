@@ -673,6 +673,11 @@ a {
   font-size: 0.875rem;
 }
 
+a:hover {
+  background-color: #f0fff4;
+  color: #276749;
+}
+
 .content-box {
   background-color: #f7fafc;
   padding-left: 1rem;
