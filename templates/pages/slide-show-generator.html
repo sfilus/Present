@@ -1,0 +1,24 @@
+<%= htmlWebpackPlugin.options.header %>
+<!-- no content above here -->
+
+    <h1 class="title">
+      Slide Show Project
+    </h1>
+
+    <div class="content-wrapper">
+      <!-- Things inside this div.content-wrapper will be placed inside the white "card" on the slide. -->
+      <p>
+        Here's a high level overview of how the slide show generator works. The project is hosted on <a target="_blank" href="https://github.com/sfilus/Present">Github</a>.
+      </p>
+      <ul>
+        <li>The goal of the project was to make it easy to create static site slide shows which could be hosted on Netlify, S3, etc.</li>
+        <li>To add a slide run <i>node add-slide.js slide-name.html "slide title"</i> in the root of the project. This will stub out a slide template, and append it to the list of slides in slides.json.</li>
+        <li>Running <i>npm run build</i> will loop through the templates in slides.json, and using Webpack, will generate the footer partial, and all slide html templates.</li>
+        <li>Generated HTML, Javascript, and CSS files get written to public/build.</li>
+        <li>Client side, the Back and Next buttons, as well as the select list, make ajax requests to retrieve slide templates, and swaps in only the content portion of the slide. The footer is persistent across slide navigations.</li>
+        <li>Stimulus was used to wire up actions to the interactive elements on the page, as well as to keep the browser history up to date.</li>
+      </ul>
+    </div>
+
+<!-- no content below here -->
+<%= htmlWebpackPlugin.options.footer %>
